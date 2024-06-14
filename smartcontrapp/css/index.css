@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+:root {
+    --primary-color: rgb(108, 31, 20);
+    --secondary-color: rgb(224, 181, 79);
+    --thirty-color: rgb(246, 222, 155);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: "century";
+    box-sizing: border-box;
+}
+
+#container {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: "center";
+    background-image: url("../images/background.png");
+}
+
+#container #logo img {
+    width: 100%;
+    margin: auto;
+    height: 100%;
+}
+
+#container form {
+    width: 400px;
+    display: flex;
+    height: 285px;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 12% auto;
+    align-items: center;
+    flex-direction: column;
+    border: 1px dashed white;
+    justify-content: space-evenly;
+}
+
+h2 {
+    color: white;
+}
+
+#container form input {
+    width: 70%;
+    height: 30px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+}
+
+#container form input:focus {
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+#container form [type="submit"] {
+    width: 60%;
+    padding: 0;
+    height: 30px;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+
+#container form [type="submit"]:hover {
+    color: brown;
+    background-color: white;
+}
+
+::placeholder {
+    color: rgb(224, 181, 179);
+}
+
+.mdi-light--account {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M11.5 14c4.14 0 7.5 1.57 7.5 3.5V20H4v-2.5c0-1.93 3.36-3.5 7.5-3.5m6.5 3.5c0-1.38-2.91-2.5-6.5-2.5S5 16.12 5 17.5V19h13zM11.5 5A3.5 3.5 0 0 1 15 8.5a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8 8.5A3.5 3.5 0 0 1 11.5 5m0 1A2.5 2.5 0 0 0 9 8.5a2.5 2.5 0 0 0 2.5 2.5A2.5 2.5 0 0 0 14 8.5A2.5 2.5 0 0 0 11.5 6'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    position: relative;
+    top: 27px;
+    left: -32%;
+    color: rgb(224, 181, 179);
+}
+
+.formkit--password {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M13.35 16H2.65C1.74 16 1 15.26 1 14.35v-7.7C1 5.74 1.74 5 2.65 5h10.7c.91 0 1.65.74 1.65 1.65v7.69c0 .91-.74 1.65-1.65 1.65ZM2.65 6c-.36 0-.65.29-.65.65v7.69c0 .36.29.65.65.65h10.7c.36 0 .65-.29.65-.65V6.65c0-.36-.29-.65-.65-.65z'/%3E%3Cpath fill='%23000' d='M12.54 6H3.46V4.54C3.46 2.04 5.5 0 8 0s4.54 2.04 4.54 4.54zM4.46 5h7.08v-.46C11.54 2.59 9.95 1 8 1S4.46 2.59 4.46 4.54z'/%3E%3Ccircle cx='12' cy='10.5' r='1' fill='%23000'/%3E%3Ccircle cx='8' cy='10.5' r='1' fill='%23000'/%3E%3Ccircle cx='4' cy='10.5' r='1' fill='%23000'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    position: relative;
+    top: 27px;
+    left: -32%;
+    color: rgb(224, 181, 179);
+}
+
+#container form .forgot {
+    color: black;
+    font-size: 12px;
+}
+
+#container form .forgot a {
+    text-decoration: none;
+    color: rgb(224, 181, 179);
+}
+
+#container form .forgot a:hover {
+    text-decoration: underline;
+}
+
+#container form .erreur {
+    color: red;
+    font-size: 10px;
+    text-align: center;
+    display: inline-block;
+}
+
+#container #forgot {
+    top: 0;
+    height: 0%;
+    opacity: 0;
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.6s ease-in;
+    background-color: rgba(224, 181, 79, 0.8);
+}
+
+#container #forgot:target {
+    opacity: 1;
+    height: 100%;
+    pointer-events: all;
+}
+
+#container #forgot form {
+    width: 390px;
+    height: 280px;
+    padding: 5px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: var(--primary-color);
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+#container #forgot form h2 a {
+    top: 0;
+    right: 5px;
+    position: absolute;
+    text-decoration: none;
+}
+
+#container #forgot form h2 a:hover {
+    color: var(--secondary-color);
+}
+
+#container #forgot form button {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    border: 1px dashed white;
+    background-color: transparent;
+}
+
+#container #forgot form button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+#container #forgot form button:hover ion-icon{
+    color: var(--primary-color);
+}
+
+#container #forgot form button ion-icon{
+    top: 2px;
+    right: 2px;
+    position: relative;
+}
